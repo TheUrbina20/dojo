@@ -53,4 +53,14 @@ RSpec.describe StreetFighterBoard do
       expect(streetFighterSelection(characters, [0,0], moves)).to eq(['Vega', 'Balrog'])
     end
   end
+
+  describe "exceptions" do
+    it "raise an exception if unexpected move given" do
+      moves = ['north']
+
+      expect {
+        streetFighterSelection(characters, [0,0], moves)
+      }.to raise_error('Whaddya doing? 👀')
+    end
+  end
 end

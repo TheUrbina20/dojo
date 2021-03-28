@@ -44,4 +44,8 @@ class StreetFighterBoard
       @row_numer += 1
     end
   end
+
+  def method_missing(method, *args, &block)
+    raise 'Whaddya doing? 👀'
+  end
 end
